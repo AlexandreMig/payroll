@@ -1,1 +1,24 @@
-<p>user-login works!</p>
+<body>
+  <div class="outer">
+    <div class="container">
+      <header>Log in to Payroll</header>
+      <ng-container *ngIf="isLogin">
+        <form (ngSubmit)="onSubmit()">
+          <div class="input-field">
+            <input type="text" id="username" name="username" [(ngModel)]="username" placeholder="Usernme" required>
+          </div>
+          <div *ngIf="username" class="input-field">
+            <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="password" required>
+          </div>
+          <div class="button">
+              <div class="inner"></div>
+              <button type="submit">Continue</button>
+          </div>
+        </form>
+        <div class="signup">
+          Not a member? <a href="#">Signup</a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</body>

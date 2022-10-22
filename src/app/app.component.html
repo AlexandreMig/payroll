@@ -1,3 +1,8 @@
+<div class="content">
 
+  <div *ngIf="userService.showLogin">
+    <app-user-login></app-user-login>
+  </div>
 
-<app-home-page></app-home-page>
+  <router-outlet></router-outlet>
+</div>
